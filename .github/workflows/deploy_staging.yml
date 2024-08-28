@@ -2,7 +2,6 @@
 
 name: Stage the app
 
-# Controls when the workflow will run
 on:
   # Allows you to run this workflow manually from the Actions tab
   pull_request:
@@ -12,5 +11,3 @@ jobs:
   build:
     runs-on: ubuntu-latest
     if: contains(github.event.pull_request.labels.*.name, 'stage')
-
-
